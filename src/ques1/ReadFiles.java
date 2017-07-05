@@ -11,7 +11,12 @@ public class ReadFiles {
 		System.out.println("\nListing of files:");
 		for(File obj:files){
 			
-			System.out.println(obj.getName());
+			System.out.print(obj.getName());
+			if(obj.isFile()){
+				System.out.println(" --> File");
+			}
+			else
+				System.out.println(" --> Directory");
 			
 		}
 		}
