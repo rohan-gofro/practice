@@ -3,14 +3,15 @@ import java.io.*;
 
 public class FilesOnServer {
 	
-	String directoryPath;
+	String directoryPath;//Directory path as parameter entered by user
 	
 	public FilesOnServer(String directoryPath){
 		
-		this.directoryPath = directoryPath;
+		this.directoryPath = directoryPath;//initializing directorypath parameter at the time of object creation
 		
 	}
 	
+	//Method to list file of a directory. Returns false in case if a directory doesn't exists
 	 boolean listFiles(){
 		
 		try{
@@ -31,6 +32,7 @@ public class FilesOnServer {
 		return true;
 	}
 	
+	//Method to access content of file if found in the directory
 	void accessFileContent(String file){
 		
 		try{
