@@ -22,7 +22,7 @@ public class ReadLines {
 			}
 			catch(Exception e){
 				System.out.println("Error reading file " + args[i]);
-				//ee.printStackTrace();
+				//e.printStackTrace();
 			}
 			
 		}
