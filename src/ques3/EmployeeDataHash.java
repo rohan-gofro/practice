@@ -57,7 +57,6 @@ public class EmployeeDataHash {
 	
 	void showData()
 	{
-		
 		if(set.size() == 0)
 			System.out.println("No records to display");
 		
@@ -82,7 +81,7 @@ public class EmployeeDataHash {
 		Scanner sc = new Scanner(System.in);
 		do{
 			System.out.println("----Menu----");
-		    System.out.println("1. Add Employee\n2.Remove by ID\n3. Search with name\n4.Search with salary range\n5.Exit");
+		    System.out.println("1. Add Employee\n2.Remove by ID\n3. Search with name\n4.Search with salary range\n5. Show data\n6.Exit");
 		    System.out.println("Enter Choice: ");
 		    choice = Integer.parseInt(sc.next()); 
 		    
@@ -132,6 +131,8 @@ public class EmployeeDataHash {
 		}
 		while(choice!=6);		
 		sc.close();
+		System.out.println("Records Status");
+		obj1.showData();
 		System.out.println("Goodbye");
 }
 }
