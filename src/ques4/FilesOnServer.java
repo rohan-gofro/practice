@@ -16,6 +16,7 @@ public class FilesOnServer {
 		
 		try{
 		File fo = new File(this.directoryPath);
+	
 		File[] fileList = fo.listFiles();
 		for(File displayList:fileList){
 			System.out.println(displayList.getName());

@@ -1,6 +1,6 @@
 package ques3;
 
-public class Employee implements Comparable<Employee>{
+public class Employee {
 
 	long empId;
 	String empName;
@@ -10,6 +10,12 @@ public class Employee implements Comparable<Employee>{
 		this.empId = empId;
 		this.empName = empName;
 		this.empSalary = empSalary;
+	}
+	
+	public Employee(long empId){
+		
+		this.empId = empId;
+		
 	}
 	
 	public long getEmpId() {
@@ -49,19 +55,6 @@ public class Employee implements Comparable<Employee>{
 		if (empId != other.empId)
 			return false;
 		return true;
-	}
-	public int compareTo(Employee arg0) {
-		// TODO Auto-generated method stub
-		
-		if(empId == arg0.empId)
-		return 0;
-		
-		else if(empId > arg0.empId)
-		return 1;
-		
-		else
-			return -1;
-		
 	}
 	
 }
