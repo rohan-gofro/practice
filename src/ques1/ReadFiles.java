@@ -4,8 +4,12 @@ public class ReadFiles {
 
 	public static void main(String[] args) {
 		
+		if(args.length == 0)
+		{
+			System.out.println("No arguments found");
+			System.exit(0);
+		}
 		System.out.println("Path given: " + args[0]);
-		try{
 		File dir = new File(args[0]);
 		File[] files = dir.listFiles();
 		System.out.println("\nListing of files:");
@@ -18,10 +22,6 @@ public class ReadFiles {
 			else
 				System.out.println(" --> Directory");
 			
-		}
-		}
-		catch(ArrayIndexOutOfBoundsException e){
-			System.out.println("Please Enter directory path in command line argument");
 		}
 		
 	}

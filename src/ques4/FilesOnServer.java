@@ -16,18 +16,18 @@ public class FilesOnServer {
 		
 		try{
 		File fo = new File(this.directoryPath);
-	
+		if(!fo.exists()){
+			return false;
+		}
 		File[] fileList = fo.listFiles();
 		for(File displayList:fileList){
 			System.out.println(displayList.getName());
 		}
 		}catch(NullPointerException e){
 			System.out.println("No such directory exists");
-			return false;
 		}
 		catch(Exception e){
 			e.printStackTrace();
-			return false;
 		}
 		
 		return true;

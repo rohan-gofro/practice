@@ -16,6 +16,9 @@ public class AccessFile {
 			file = sc.next();
 			obj.accessFileContent(file);//Accessing file content in directory
 		}
+		else{
+			System.out.println("Not found");
+		}
 		sc.close();	//Closing scanner class object
 		System.out.println("\n___________\nEnd");
 	}
